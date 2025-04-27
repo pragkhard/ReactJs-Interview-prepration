@@ -2,7 +2,7 @@ Sure! Here's a daily routine table for the month of May. You can adjust the acti
 
 | **Date** | **Morning** | **Midday** | **Afternoon** | **Evening** | **Night** |
 |----------|-------------|------------|---------------|-------------|-----------|
-| May 1    | Wake Up, Exercise, Breakfast | Lunch Break | Short Break, Continue Work/School | Wrap Up Work/School, Dinner | Prepare for Bed, Wind Down, Sleep |
+| May 1    | done | done | Short Break, Continue Work/School | Wrap Up Work/School, Dinner | Prepare for Bed, Wind Down, Sleep |
 | May 2    | Wake Up, Exercise, Breakfast | Lunch Break | Short Break, Continue Work/School | Wrap Up Work/School, Dinner | Prepare for Bed, Wind Down, Sleep |
 | May 3    | Wake Up, Exercise, Breakfast | Lunch Break | Short Break, Continue Work/School | Wrap Up Work/School, Dinner | Prepare for Bed, Wind Down, Sleep |
 | May 4    | Wake Up, Exercise, Breakfast | Lunch Break | Short Break, Continue Work/School | Wrap Up Work/School, Dinner | Prepare for Bed, Wind Down, Sleep |
