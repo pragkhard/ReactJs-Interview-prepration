@@ -11,6 +11,16 @@ Select Framework, select variant
 
 ![alt text](image.png)
 
+🆚 Comparison: Vite vs CRA Folder Structure
+Feature	Vite	Create React App (CRA)
+Entry File	main.jsx (inside src/)	index.js (inside src/)
+Main HTML File	index.html (root)	public/index.html
+Build Tool	Vite (ESM + Rollup)	Webpack
+Static Assets	public/ and src/assets/	public/
+Config File	vite.config.js	webpack.config.js (hidden in CRA)
+Faster HMR	✅ Yes	❌ No (Slower)
+
+
 Difference between package.json & package-lock.json-
 =======================================================
 
