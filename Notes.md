@@ -39,6 +39,9 @@ Npm and Npx-
 npm  - (Node Package Manager) installs packages globally or locally
 npx - (Node Package eXecute) Runs packages without installing them globally
 
+Normal Dependencies (dependencies) -Needed for the app to run in production
+Dev Dependencies (devDependencies) - Only required for development/testing
+
 Bundlers
 ----------
 bundlers are tools used to combine multiple files (such as JavaScript, CSS, and images) from a project so that it can be shipped to production.
@@ -56,5 +59,10 @@ JSX makes React easier to read, write, and maintain while improving performance 
 Babel
 -------
 Babel is a JavaScript compiler that takes JSX and transforms it into plain JavaScript that browsers can understand. Since JavaScript engines only interpret ECMAScript (pure JavaScript), Babel ensures JSX and modern JavaScript features are converted for compatibility.
+
+Why might code work locally but fail in production?
+-------------------------------------------------------
+several factors can cause failures in production due to differences in environment, dependencies, and configurations.
+
 
 
