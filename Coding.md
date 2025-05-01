@@ -1,6 +1,7 @@
 Fetch the data from API - 
-      
+
         import { useState, useEffect } from "react";
+        
         export default function App() {
         const [data, setData] = useState([]);
         const fetchData = async () => {
