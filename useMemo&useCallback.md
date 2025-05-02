@@ -1,7 +1,7 @@
 useMemo vs. useCallback 
 ---------------------------
-✅ useMemo → Memoizes a value (avoids re-calculating)
-✅ useCallback → Memoizes a function (avoids re-creating it)
+* ✅ useMemo → Memoizes a value (avoids re-calculating)
+* ✅ useCallback → Memoizes a function (avoids re-creating it)
 
 useMemo
 =========
@@ -33,6 +33,30 @@ useMemo
 
 useCallback
 ============
+
+        import { useState } from "react";
+        export default function App() {
+        const [count, setCount] = useState(0);
+        const [text, setText] = useState("");
+
+        // Function is recreated on every render
+        const handleClick = () => {
+            console.log("Button clicked!");
+        };
+        console.log("Component re-rendered!");
+        return (
+            <div>
+            <h2>Count: {count}</h2>
+            <button onClick={() => setCount(count + 1)}>Increment</button>
+            <input onChange={(e) => setText(e.target.value)} placeholder="Type something" />
+            <button onClick={handleClick}>Click Me</button>
+            </div>
+        );
+        }
+        const handleClick = useCallback(() => {
+            console.log("Button clicked!");
+        }, []);
+
 
 
 
