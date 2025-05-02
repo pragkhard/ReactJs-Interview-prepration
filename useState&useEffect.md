@@ -18,6 +18,6 @@ Different Use Cases of useEffect -
 
 Scenario & Behavior -
 
-No Dependency Array	-  Runs after every render (initial + on every state/prop update)
-Empty Dependency Array [] -	Runs only once after the first render (similar to componentDidMount)
-With Dependencies [btnNameReact] -	Runs after the first render and only when btnNameReact changes
+* No Dependency Array	-  Runs after every render (initial + on every state/prop update)
+* Empty Dependency Array [] -	Runs only once after the first render (similar to componentDidMount)
+* With Dependencies [btnNameReact] -	Runs after the first render and only when btnNameReact changes
