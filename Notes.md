@@ -55,10 +55,6 @@ Why might code work locally but fail in production?
 -------------------------------------------------------
 several factors can cause failures in production due to differences in environment, dependencies, and configurations.
 
-Optional chaining-
------------------------
-Optional chaining is a feature in JavaScript that allows you to safely access nested properties of an object or array, returning undefined instead of throwing an error if the property doesn't exist or is null/undefined.
-
 Which components are better: class or functional?
 ----------------------------------------------------
 
@@ -67,6 +63,16 @@ Functional components are generally considered better than class components in m
 Hooks like useEffect let you handle side effects in a much simpler way. Instead of splitting logic across multiple lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount in class components, you can now combine all related logic into a single useEffect hook. This makes the code easier to manage and understand.
 
 Additionally, functional components are lighter and more concise, which improves readability and performance. As a result, they have become the preferred choice in the React community.
+
+
+Conditional rendering 
+-----------------------
+rendering based on condition is known as conditional rendering. Example – simmer effect
+It is like we load fake page until the actual data from API
+
+Optional chaining-
+-----------------------
+Optional chaining is a feature in JavaScript that allows you to safely access nested properties of an object or array, returning undefined instead of throwing an error if the property doesn't exist or is null/undefined.
 
 
 
