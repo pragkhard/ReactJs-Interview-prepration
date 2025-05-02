@@ -59,5 +59,14 @@ Optional chaining-
 -----------------------
 Optional chaining is a feature in JavaScript that allows you to safely access nested properties of an object or array, returning undefined instead of throwing an error if the property doesn't exist or is null/undefined.
 
+Which components are better: class or functional?
+----------------------------------------------------
+
+Functional components are generally considered better than class components in modern React development. This is mainly because functional components allow you to write cleaner and more readable code, especially with the introduction of Hooks.
+
+Hooks like useEffect let you handle side effects in a much simpler way. Instead of splitting logic across multiple lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount in class components, you can now combine all related logic into a single useEffect hook. This makes the code easier to manage and understand.
+
+Additionally, functional components are lighter and more concise, which improves readability and performance. As a result, they have become the preferred choice in the React community.
+
 
 
