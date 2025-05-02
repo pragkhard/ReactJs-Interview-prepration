@@ -55,5 +55,9 @@ Why might code work locally but fail in production?
 -------------------------------------------------------
 several factors can cause failures in production due to differences in environment, dependencies, and configurations.
 
+Optional chaining-
+-----------------------
+Optional chaining is a feature in JavaScript that allows you to safely access nested properties of an object or array, returning undefined instead of throwing an error if the property doesn't exist or is null/undefined.
+
 
 
