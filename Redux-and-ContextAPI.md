@@ -16,3 +16,13 @@ Context API
     * Consumer: Any nested component can consume the data provided.
 * State Access: Components wrapped in the consumer can access the data directly without passing props manually.
 * Use Case: Commonly used for authentication, theme settings, or user preferences—scenarios where state is not frequently updated or deeply nested.
+
+-----------------------------------------------------------------------------------------------------
+
+Action-
+---------
+Action is a plain JavaScript object that must have a type property. It can also include a payload, which carries the data needed to update the state.
+
+Reducers-
+----------
+Reducers are pure functions that take the current state and an action as input, and return a new state.
