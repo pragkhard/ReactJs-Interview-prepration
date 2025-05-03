@@ -12,6 +12,15 @@ Virtual DOM is a lightweight copy of the actual DOM or we can say that it is an 
  
 Virtual DOM is an in-memory representation of real DOM. When there are changes in a React component the entire UI is re-rendered in Virtual DOM then it calculate the difference between the previous DOM representation and the new one. Once the calculations are done, the real DOM will be updated with only the things that have actually changed. The entire process called reconciliation.  
 
+Difference between props and state- 
+---------------------------------------
+Both props and state are plain javascript object. Both of them hold information, they are different  in their functionality with respect to component. 
+
+* Props are passing data from one component to another component where as in state data is not      accessible outside from component. 
+
+* Props are Immutable cannot be changed directly within the component. State are  mutable can be changed using this.setState() in class components or state hooks in functional components. 
+
+* In respect of data flow Props are Unidirectional passing data from parent to child components. State are Unidirectional changes trigger re-renders within the component. 
 
 Unique Key id while using map-
 --------------------------------
