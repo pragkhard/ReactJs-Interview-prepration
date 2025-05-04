@@ -12,6 +12,12 @@ Virtual DOM is a lightweight copy of the actual DOM or we can say that it is an 
  
 Virtual DOM is an in-memory representation of real DOM. When there are changes in a React component the entire UI is re-rendered in Virtual DOM then it calculate the difference between the previous DOM representation and the new one. Once the calculations are done, the real DOM will be updated with only the things that have actually changed. The entire process called reconciliation.  
 
+JSX
+-----
+JSX (JavaScript XML) in React.js is a syntax extension that allows developers to write HTML-like code directly in JavaScript files.  
+JSX makes React code more readable and intuitive. 
+During compilation, JSX is transformed into JavaScript code, enabling the creation of React elements for rendering on web pages/ enabling React to render components efficiently.
+
 Difference between props and state- 
 ---------------------------------------
 Both props and state are plain javascript object. Both of them hold information, they are different  in their functionality with respect to component. 
