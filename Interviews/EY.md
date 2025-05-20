@@ -17,6 +17,22 @@ To maintain code quality in my React project, we follow a mix of best practices,
 
 "Additionally, we use tools like SonarQube or code coverage reports in CI pipelines to detect code smells and ensure test coverage goals are met. These practices help us keep the codebase clean, scalable, and easy to maintain."
 
+We maintain code quality by combining coding standards, reusable patterns, and automation.
+
+First, we enforce consistent syntax and best practices using ESLint and Prettier.
+
+Our project follows a modular folder structure and uses reusable components to reduce duplication.
+
+For state management, we use React hooks or Redux Toolkit, keeping logic separate from the UI to make components easier to test and maintain.
+
+Every code change goes through a pull request with peer reviews, which helps us catch issues early and share knowledge within the team.
+
+We write unit and integration tests using Jest and React Testing Library to ensure components behave as expected.
+
+Finally, we use CI pipelines that automatically run tests and lint checks before any deployment.
+
+These steps together help us write clean, stable, and maintainable code across the project."
+
 ------------------------------------------------------------------------------------------
 3. What is Generic means?
 ------------------------------------------------------------------------------------------
