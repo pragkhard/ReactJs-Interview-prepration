@@ -1,6 +1,6 @@
 EY - 19/may/2025
-1. difference between usestate, useReducer and usecontext 
---------------------------------------------------------
+1. difference between usestate, useReducer and usecontext/ Explain usecontext
+------------------------------------------------------------------------------------------
 * useState: A hook to manage local state in functional components.
 * useReducer: An alternative to useState for complex state logic with multiple actions.
 * useContext: A hook to access global state or values without prop drilling.
@@ -117,5 +117,11 @@ App.js
 
 6. React Project Architecture-
 ----------------------------
+
+7. Performance Optimisation approaches
+----------------------------------------
+
+8. lazy loading
+-----------------
 
 
