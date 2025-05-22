@@ -20,6 +20,17 @@ React is widely used nowadays instead of Angular or Vue. What are the main featu
 
 * Lastly, React has a larger ecosystem and community, with massive adoption in the industry and better support for third-party libraries.
 
+InShort-
+--------
+React, is an open-source JavaScript library .It is used for building single-page applications. It focuses on component-based development, utilizes a virtual DOM for performance optimization, allows JSX , enforces unidirectional data flow, It also supports mobile app development through React Native and benefits from an active and supportive community. 
+ 
+--------------------------------------------------------------------------------------------------------
+JSX
+-----
+JSX (JavaScript XML) in React.js is a syntax extension that allows developers to write HTML-like code directly in JavaScript files.  
+JSX makes React code more readable and intuitive. 
+During compilation, JSX is transformed into JavaScript code, enabling the creation of React elements for rendering on web pages/ enabling React to render components efficiently.
+
 --------------------------------------------------------------------------------------------------------
 
 What is the significance of keys in React?
@@ -30,6 +41,17 @@ In React, keys are used to uniquely identify elements, especially when rendering
 For example, instead of hardcoding multiple list items, we usually use the map() function to dynamically render components from an array. In such cases, assigning a unique key to each item helps React track which items have changed, been added, or removed.
 
 We should avoid using array indexes as keys because when items are added, removed, or reordered, the indexes can change, leading to performance issues and unexpected behavior during re-renders.
+
+--------------------------------------------------------------------------------------------------------
+
+Unique Key id while using map-
+--------------------------------
+
+*   Each item in the list must be uniquely identified
+    DOM is going to re-render all the components again. As DOM can’t identify where to place it. But if we give each of them a unique ID then react knows where to put that component according to the ID. It is a good optimization and performance thing. Note* Never use index as keys in map. It is not recommended.
+
+*   named exports, you have to write curly braces and then whatever you need to import.
+*   If we use default export, then no need to use curly bracket at the time of import.
 
 ----------------------------------------------------------------------------------------------------------
 
