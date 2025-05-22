@@ -91,3 +91,13 @@ ChildComponent.jsx
 
 💡 Best Practice
 Always try to pass data from parent to child via props. If the child needs to update the parent, lift the state up to the parent and manage it there. This keeps your components clean and your data flow easy to trace.
+
+----------------------------------------------------------------------------------------------------------
+
+What is Prop Drilling and how can we avoid it?
+================================================
+Prop drilling refers to the process of passing data or functions from a parent component down to child components, and then further down to inner child components. For example, if we create some functions or data in a parent component and pass them to a child component via props, and then the child passes the same props to its own child components, this pattern is known as prop drilling.
+
+This approach should be avoided when possible, as it increases the complexity of the code and makes the project harder to manage. When too many layers are involved, developers may overlook or misplace props, leading to bugs and confusion.
+
+To avoid prop drilling, we can use a centralized state management solution such as the Context API or state management libraries like Redux, which allow data to be shared directly across components without needing to pass props through multiple levels.
