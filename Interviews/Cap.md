@@ -11,6 +11,8 @@
 12. Context API.
 
 
+Note:
+------
 
 * Candidate should be able to explain more on implementation, design perspective of project, should be able to explain properly on all these terms used in their project and why?,
 * what are the pros/cons. 
