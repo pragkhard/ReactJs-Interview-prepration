@@ -140,4 +140,7 @@ App.js
 8. lazy loading
 -----------------
 
+9. When would you choose to use Redux over Context API in a React application, and in what scenarios is Context API sufficient?
+------------------------
+
 
