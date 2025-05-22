@@ -6,12 +6,6 @@ Main feature of reactjs-
 -------------------------
 React, is an open-source JavaScript library .It is used for building single-page applications. It focuses on component-based development, utilizes a virtual DOM for performance optimization, allows JSX , enforces unidirectional data flow, It also supports mobile app development through React Native and benefits from an active and supportive community. 
  
-Virtual DOM- 
---------------
-Virtual DOM is a lightweight copy of the actual DOM or we can say that it is an in-memory representation of real DOM. When there are changes in a React component, React first updates the Virtual DOM instead of the real DOM. Then, it compares the updated Virtual DOM with the previous version to calculate the difference between it. Once the calculations are done, the real DOM will be updated with only the things that have actually changed. The entire process called reconciliation This process improve the performance by reducing unnecessary re-renders and DOM manipulations and enhancing the application's speed and efficiency. 
- 
-Virtual DOM is an in-memory representation of real DOM. When there are changes in a React component the entire UI is re-rendered in Virtual DOM then it calculate the difference between the previous DOM representation and the new one. Once the calculations are done, the real DOM will be updated with only the things that have actually changed. The entire process called reconciliation.  
-
 JSX
 -----
 JSX (JavaScript XML) in React.js is a syntax extension that allows developers to write HTML-like code directly in JavaScript files.  
