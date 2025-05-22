@@ -19,3 +19,32 @@ React is widely used nowadays instead of Angular or Vue. What are the main featu
 * Another big advantage is that React uses JSX – allowing developers to write HTML inside JavaScript – which feels more intuitive and keeps logic and UI tightly coupled. Angular separates logic (TypeScript) and templates (HTML), which some developers find less seamless.
 
 * Lastly, React has a larger ecosystem and community, with massive adoption in the industry and better support for third-party libraries.
+
+--------------------------------------------------------------------------------------------------------
+
+What is the significance of keys in React?
+---------------------------------------------
+
+In React, keys are used to uniquely identify elements, especially when rendering lists. Every component or element in a list should have a unique key to help React efficiently update and re-render components when the data changes.
+
+For example, instead of hardcoding multiple list items, we usually use the map() function to dynamically render components from an array. In such cases, assigning a unique key to each item helps React track which items have changed, been added, or removed.
+
+We should avoid using array indexes as keys because when items are added, removed, or reordered, the indexes can change, leading to performance issues and unexpected behavior during re-renders.
+
+----------------------------------------------------------------------------------------------------------
+
+What are Synthetic Events in React?
+---------------------------------------------
+
+In React, Synthetic Events are wrapper objects around the browser’s native events. They provide a consistent and cross-browser interface to handle events in a React application.
+
+Instead of directly using the native DOM events, React uses its own event system called the Synthetic Event system. For example, when you use onClick, onChange, or onSubmit in React, you’re actually using synthetic events.
+
+These events work the same way across all browsers, and React handles the event delegation internally for better performance and compatibility.
+
+----------------------------------------------------------------------------------------------------------
+
+What do you understand by references in React?
+-----------------------------------------------
+We are using use ref hook for creating refs
+what refs does the ref will contain all the component code over there so we can manipulate that particular components uh events and contents by using refs
