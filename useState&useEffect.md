@@ -1,3 +1,10 @@
+Hooks-
+======
+* Functional component do not have state and life cycle method.
+* To use state and lifecycle methods we can import hooks in functional component.
+
+---------------------------------------------------------------------------------------------
+
 useState – 
 ============
 useState is a React Hook for managing component-level state.
