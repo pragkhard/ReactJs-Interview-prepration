@@ -1,6 +1,6 @@
 Virtual DOM
 ------------
-The Virtual DOM is a lightweight, in-memory representation of the actual DOM. When there are changes in a React component React first updates the Virtual DOM instead of the real DOM directly, it calculate the difference between updated Virtual DOM with the previous version(this process is called "diffing"). Once the calculations are done,then the real DOM will be updated with only the things that have actually changed. The entire process called reconciliation. 
+The Virtual DOM is a lightweight, in-memory representation of the actual DOM. When there are changes in a React component React first updates the Virtual DOM instead of the real DOM directly, it calculate the difference between updated Virtual DOM with the previous version(this process is called "diffing"). Once the calculations are done,then the real DOM will be updated with only the things that have actually changed rather than re-rendering the entire DOM. The entire process called reconciliation. 
 
 This process improve the performance by reducing unnecessary re-renders and DOM manipulations and enhancing the application's speed and efficiency.
 
@@ -65,3 +65,16 @@ What do you understand by references in React?
 -----------------------------------------------
 We are using use ref hook for creating refs
 what refs does the ref will contain all the component code over there so we can manipulate that particular components uh events and contents by using refs
+
+----------------------------------------------------------------------------------------------------------
+
+How do you manage state in a large-scale React application?
+------------------------------------------------------------
+In a large-scale React application, state is managed using a combination of:
+
+* Local State – Managed with useState or useReducer for component-specific data.
+* Global State – Handled using state management libraries like Redux, Recoil, or Zustand for shared data across components.
+* Context API – Used for lightweight global data like theme or user auth, but not ideal for frequent updates.
+* Server State – Managed using tools like React Query or RTK Query to sync with APIs efficiently.
+* Persistent State – Stored in localStorage, sessionStorage, or IndexedDB for data persistence across sessions.
+* Best practices include modularizing state logic, normalizing data, and avoiding prop drilling through proper state hierarchy or context.
