@@ -1,6 +1,6 @@
 Virtual DOM
 ------------
-The Virtual DOM is a lightweight, in-memory representation of the actual DOM. When there are changes in a React component React first updates the Virtual DOM instead of the real DOM directly, it calculate the difference between updated Virtual DOM with the previous version. Once the calculations are done,then the real DOM will be updated with only the things that have actually changed. The entire process called reconciliation. 
+The Virtual DOM is a lightweight, in-memory representation of the actual DOM. When there are changes in a React component React first updates the Virtual DOM instead of the real DOM directly, it calculate the difference between updated Virtual DOM with the previous version(this process is called "diffing"). Once the calculations are done,then the real DOM will be updated with only the things that have actually changed. The entire process called reconciliation. 
 
 This process improve the performance by reducing unnecessary re-renders and DOM manipulations and enhancing the application's speed and efficiency.
 
