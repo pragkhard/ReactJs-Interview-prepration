@@ -19,7 +19,7 @@ These methods are often used to perform tasks such as API calls, event listeners
 As we know In functional components does not have the lifecycle methods, React provides the `useEffect` hook to handle lifecycle events. It combines the functionality of all the above lifecycle methods in one unified hook.
 
 * When you provide an empty dependency array (`[]`) to `useEffect`, the code inside it runs once, similar to `componentDidMount`.
-* When you pass a specific state or prop in the dependency array, the effect runs every time that value changes, mimicking `componentDidUpdate`.
+* When you pass a specific state or prop in the dependency array, the effect runs every time that value changes, similar to `componentDidUpdate`.
 * To simulate `componentWillUnmount`, you return a cleanup function from inside the `useEffect`. This function runs when the component is unmounted.
 
 
