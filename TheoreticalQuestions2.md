@@ -28,11 +28,13 @@ keeps the exact version of dependencies ensuring that whatever version is instal
 
 Npm and Npx- 
 -------------
-npm  - (Node Package Manager) installs packages globally or locally
-npx - (Node Package eXecute) Runs packages without installing them globally
+✅ npm  - (Node Package Manager) installs packages globally or locally.
 
-Normal Dependencies (dependencies) -Needed for the app to run in production
-Dev Dependencies (devDependencies) - Only required for development/testing
+✅ npx - (Node Package eXecute) Runs packages without installing them globally.
+
+✅ Normal Dependencies (dependencies) -Needed for the app to run in production
+
+✅ Dev Dependencies (devDependencies) - Only required for development/testing
 
 Bundlers
 ----------
