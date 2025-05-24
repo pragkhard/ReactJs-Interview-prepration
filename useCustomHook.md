@@ -2,6 +2,8 @@ CustomHook-
 -----------
 You need to fetch data from an API in multiple components. Without a custom hook, you'll have to duplicate the useEffect and fetch logic in every component.
 
+Main purpose is to avoid the duplicate logic
+
 
 Create "useFetch.js" custom hook – 
 ==================================
@@ -42,5 +44,39 @@ Import the  custom hook in App.js -
         );
         }
 
+------------------------------------------------------------------------------------------------------
+Other example-
+
+App.js
+=======
+
+        import React from "react";
+        import useCounter from "./useCounter";
+
+        export default function App() {
+        const data = useCounter();
+        return <>{data}</>;
+        }
+
+useCounter.js
+==============
+
+        import { useState } from "react";
+
+        export default function useCounter() {
+        const [count, setCount] = useState(0);
+        return (
+            <>
+            <h1>{count}</h1>
+            <button
+                onClick={() => {
+                setCount(count + 1);
+                }}
+            >
+                OnClick
+            </button>
+            </>
+        );
+        }
 
 
