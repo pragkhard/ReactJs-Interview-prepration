@@ -7,8 +7,8 @@ Hooks-
 
 useState – 
 ============
-useState is a React Hook for managing component-level state.
-React will automatically re-render the component when the state changes.
+* useState is a React Hook for managing component-level state / ocal state of the component.
+* React will automatically re-render the component when the state changes.
 * 📌 useState changes cause re-renders.
 * 📌 useEffect runs after render but does not trigger one. 🚀
 
