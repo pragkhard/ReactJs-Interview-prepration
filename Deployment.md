@@ -4,11 +4,13 @@ How to deploy Vite React App on AWS S3
 
 Steps
 1.Build the project: npm run build
-2️.Create an S3 bucket & enable Static Website Hosting
-3️.Upload dist/ files to S3
-4️.Set public access permissions
-5️.Access the website using the S3 URL
-============================================================================
+2.Create an S3 bucket & enable Static Website Hosting
+3.Upload dist/ files to S3
+4.Set public access permissions
+5.Access the website using the S3 URL
+
+-----------------------------------------------------------------------------------------------------
+
 Deploy React App on AWS S3 | Amazon Route 53 | Amazon CloudFront or Build and deploy ReactJs App using Jenkins Pipeline | Deploy ReactJS app to AWS S3 Which approach is good to deployment?
 💬 "For small React apps, I prefer deploying to AWS S3 with CloudFront for caching and Route 53 for domain management. However, for large projects with frequent updates, Jenkins CI/CD is better, as it automates builds, deployments, and cache invalidation, ensuring a smooth DevOps workflow."
 
