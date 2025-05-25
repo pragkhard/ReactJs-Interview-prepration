@@ -3,11 +3,11 @@ How to deploy Vite React App on AWS S3
 💬 "To deploy a Vite React app on AWS S3, I first build the project using npm run build, then create an S3 bucket and enable static hosting. After uploading the dist/ files and setting permissions, the site is accessible via the S3 endpoint. For better performance, I can integrate CloudFront with HTTPS support."
 
 Steps
-1.Build the project: npm run build
-2.Create an S3 bucket & enable Static Website Hosting
-3.Upload dist/ files to S3
-4.Set public access permissions
-5.Access the website using the S3 URL
+* Build the project: npm run build
+* Create an S3 bucket & enable Static Website Hosting
+* Upload dist/ files to S3
+* Set public access permissions
+* Access the website using the S3 URL
 
 -----------------------------------------------------------------------------------------------------
 
