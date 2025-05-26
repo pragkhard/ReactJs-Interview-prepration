@@ -19,3 +19,6 @@ When we use selector, this phenomenon known as subscribing to the store
 We say that header component subscribe to a store and when I say subscribe the store basically we shink with the
 store. If the data inside the store changes my header component will update automatically.
 How do you subscribe – will subscribe using the selector
+
+
+* The Redux Toolkit package is intended to be the standard way to write Redux logic.
