@@ -8,6 +8,8 @@ Now what is the function actually – This function known as the reducer
 Once again when I click on the add button it dispatches an action which calls the reducer function which
 modifies /updates the slice of redux store. Now the card slice has some data inside of it. This is how to write the
 data
+ ----------------------------------------------------------------------------------------------------------
+
 Suppose I want to read data. Now I want to get this data to some other part. How can I read data
 For that we use selector to read the data from our store and the selector will modify are react component . This is
 how we read data. Selector will give you data over here.
