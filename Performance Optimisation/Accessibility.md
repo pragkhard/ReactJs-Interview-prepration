@@ -35,7 +35,7 @@ What are some accessibility best practices you follow during development?
  ---------------------------------------------------------------------------
 I follow several key accessibility best practices to ensure that web applications are usable by everyone, including people with disabilities:
 
-* Semantic HTML: I use proper HTML elements for their intended purposes, such as <button> for actions, <form> for form groups, and appropriate heading levels (<h1> to <h6>) to ensure screen reader compatibility.
+* Semantic HTML: I use proper HTML elements for their intended purposes, such as < button > for actions, < form > for form groups, and appropriate heading levels (< h1 > to < h6 >) to ensure screen reader compatibility.
 
 * Alt Text: I ensure that all meaningful images have descriptive alt attributes, and decorative images have alt="".
 
