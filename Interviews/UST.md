@@ -91,3 +91,19 @@ If no positioned ancestor is found, the .child gets positioned relative to the <
                     <div class="child col-3"></div>
                     <div>
                 </div>
+
+---------------------------------------------------------------------------------------------------------
+* Difference between SCSS and LESS?
+---------------------------------------------------------------------------------------------------------
+
+SCSS (Sassy CSS)
+-----------------
+* SCSS is a CSS preprocessor that adds extra features like variables, mixins, and loops to make writing CSS easier and more powerful.
+* It uses a dollar sign $ for variables (like $color: red;).
+* SCSS is part of the Sass family and is very popular in modern projects like React, Angular, and Bootstrap 4+.
+
+LESS (Leaner CSS)
+------------------
+* LESS is another CSS preprocessor with similar features like variables and mixins.
+* It uses an at sign @ for variables (like @color: red;).
+* LESS is simpler and often used in older projects, like Bootstrap 3.
