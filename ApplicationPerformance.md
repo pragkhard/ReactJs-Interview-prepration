@@ -32,15 +32,15 @@ Here's a short and effective way to explain React optimization in an interview:
 
 
 
-Accessibility.md
-Carousel-Performance-Optimisation.md
-Client-vs-Server-Side-Rendering.md
-CodeSplitting.md
-ErrorBoundaries.md
-HOC-Pattern.md
-ModulePattern.md
-ReactProfiler.md
-RenderProps.md
-Virtualization.md
-WebVitals.md
+* Accessibility.md
+* Carousel-Performance-Optimisation.md
+* Client-vs-Server-Side-Rendering.md
+* CodeSplitting.md
+* ErrorBoundaries.md
+* HOC-Pattern.md
+* ModulePattern.md
+* ReactProfiler.md
+* RenderProps.md
+* Virtualization.md
+* WebVitals.md
 
