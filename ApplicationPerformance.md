@@ -44,3 +44,24 @@ Here's a short and effective way to explain React optimization in an interview:
 * Virtualization.md
 * WebVitals.md
 
+
+"I use multiple techniques to optimize performance and improve user experience in React apps, depending on the scenario.
+
+For accessibility, I follow best practices like semantic HTML, ARIA roles, and keyboard navigation. In a recent dashboard project, making buttons accessible helped improve both usability and SEO.
+
+For carousels, I lazy-load images and render only a few slides at a time. This helped reduce DOM load and made the homepage much faster, especially on mobile.
+
+When it comes to client-side vs server-side rendering, I prefer SSR using Next.js for SEO-critical pages like blogs or product details, while using CSR for dynamic pages like dashboards.
+
+Code splitting is another key area—I use React.lazy and Suspense to load components only when needed. This helped reduce the initial bundle size significantly in one of my projects.
+
+I also implement Error Boundaries to catch runtime errors in parts of the app and display a fallback UI, preventing the whole app from crashing. We used this for a payment section that sometimes received unstable data.
+
+For reusability, I use HOCs for wrapping logic like auth or theming. It helped reduce repeated logic across components. Similarly, I apply the module pattern to encapsulate helper functions and keep the codebase clean.
+
+Using the React Profiler, I identify slow or unnecessary re-renders. In one case, I noticed a component re-rendering on every keystroke, so I optimized it using useCallback.
+
+I’ve also worked with render props to create reusable data-fetching components, and virtualization for large lists or tables using react-window, which drastically improved scroll performance.
+
+Lastly, I monitor Web Vitals like LCP, CLS, and FID. Once, I fixed a layout shift issue caused by dynamic banners by reserving space using aspect ratios.”_
+
