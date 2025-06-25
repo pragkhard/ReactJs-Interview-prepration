@@ -37,10 +37,14 @@ First icon is Focus the selected component into an errored state. If i click on 
 
 2.
 ![alt text](image-3.png)
+
 Second one is inspect the matching DOM element . Inspect the matching DOM element and If i want to see, where the element does exist inside the DOM. So, what i can do , I just click on the eye button and it will just take me directly to the div. 
 
 3.
- 
+![alt text](image-4.png)
+
+
+![alt text](image-5.png)
 
 Profiler -
 -----------
