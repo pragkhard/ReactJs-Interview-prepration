@@ -31,4 +31,20 @@ And If i come over here in he flame grap chart, you can see the sequentially sho
 Grey - It says over here did not re-render 
 Blue - data re-render
 
-React developer tool is all about , this is how it helps us to you know, showcase our app, showcase the states and hooks that we're usig inside of our app, potentially improve the performanace of our apps, 
+React developer tool is all about , this is how it helps us to you know, showcase our app, showcase the states and hooks that we're usig inside of our app, potentially improve the performanace of our apps.
+
+-------------------------------------------------------------------------------------------------------
+
+There are multiple techniques in React that we can use to optimize our application, and one of the most useful tools for this is the React Profiler, which is part of the React Developer Tools extension.
+
+Once we install the React Developer Tools, we get two additional tabs in the browser dev tools: Components and Profiler.
+
+The Components tab helps us visualize the complete component hierarchy of the application. It transpiles JSX into regular HTML and lets us inspect props, state, and hooks. This makes debugging much easier by allowing us to trace where each component exists and how it behaves in the DOM.
+
+The Profiler tab provides a performance chart that shows how much time each component took to render or re-render. This visual representation helps us identify performance bottlenecks and optimize components accordingly.
+
+Together, these tools help us inspect, debug, and optimize our React application more effectively.
+
+--------------------------------------------------------------------------------------------------------
+
+There are multiple techniques in react using that we can optimized our react application . we do have react profile, It is basically the part of react dev tools so after installing the react dev tool and the extension it will provide us the component and profiler tab. It basically transpiled jsx into HTML . by using the component we can see the hierarchy tree of the complete app so using it easily we can debug and profiler is basically provide us the chart of the render and re-render so using it we can optimize the component 
