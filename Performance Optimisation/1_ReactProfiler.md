@@ -14,6 +14,7 @@ https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadoplj
 What is basically does is - 
 ---------------------------
 Inspect - > We get these two extra options overe there -> Components and profiler
+![alt text](image.png)
 
 We need to understand why do we need this ?
 We need this component & profiler
@@ -39,7 +40,7 @@ There are multiple techniques in React that we can use to optimize our applicati
 
 Once we install the React Developer Tools, we get two additional tabs in the browser dev tools: Components and Profiler.
 
-The Components tab allows us to see the component hierarchy tree of the entire application. It shows each component’s props, state, and hooks. It transpiles JSX into regular HTML. This makes debugging much easier by allowing us to trace where each component exists and how it behaves in the DOM.
+The Components tab allows us to see the component hierarchy tree of the entire application. It shows each component’s props, state, and hooks. This makes debugging much easier by allowing us to trace where each component exists and how it behaves in the DOM.
 
 The Profiler tab provides a performance chart that shows how much time each component took to render or re-render. This visual representation helps us identify performance bottlenecks and optimize components accordingly.
 
