@@ -43,8 +43,17 @@ Second one is inspect the matching DOM element . Inspect the matching DOM elemen
 3.
 ![alt text](image-4.png)
 
+Log this component data to the console. If we want to see the further state, props. We can see there
 
 ![alt text](image-5.png)
+
+4.
+![alt text](image-6.png)
+
+View source for this element. It will onto this source(src) tab and you can see where this is inside of our code.
+
+![alt text](image-7.png)
+
 
 Profiler -
 -----------
