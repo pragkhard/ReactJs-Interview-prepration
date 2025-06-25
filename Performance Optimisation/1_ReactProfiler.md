@@ -61,6 +61,7 @@ Profiler -
 Profiler is used for measuring the performance. It provide us the chat , this chart provides us how much time a particular component took to be rendered
 
 If i click on this start profiling make the changes(ex. change the star rating)
+
 ![alt text](image-8.png)
 
 It will provide the rank chart. This cart shows us how much time a particular component took to be rendered and we have the different different components a, different different times like - here we can see the render time in Rendered at section, here we can see home component re-renderd 2 times and star section takes 47.3 ms time
