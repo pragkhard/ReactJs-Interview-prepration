@@ -71,10 +71,23 @@ It will provide the rank chart. This cart shows us how much time a particular co
 
  ![alt text](image-11.png)
 
-Grey - It says over here did not re-render 
-Blue - data re-render
+Components in blue indicate they were re-rendered.
+Components in grey indicate they did not re-render.
+Home page component took 945 milisecond out of 1400 miliseconds. So, what does this means? so this basically means that it the home page only took 943 miliseconds and star and filter component inside of it takes this much time.
+We just remove the loops logic and start and stop the profiler. So we have largely optimized our app and made it so much faster.
 
-React developer tool is all about , this is how it helps us to you know, showcase our app, showcase the states and hooks that we're usig inside of our app, potentially improve the performanace of our apps.
+![alt text](image-12.png)
+
+If the component is re-render , you can see what caused this update. It will tell us exectly why this was re-rendered. 
+So if yo go to the settings, over here and in the profiler, just tick record by each component rendered by profiler. and it will show you what caused this updated.
+
+![alt text](image-13.png)
+
+Now we have one more thing we have timeline of re-rendering. 
+
+![alt text](image-14.png)
+
+React developer tool is all about , this is how it helps us to you know, showcase our app, showcase the states and hooks that we're usig inside of our app, potentially improve the performanace of our apps. Going inside of the profiler and finding out the culprits which are responsible for slow , rendering of the components or of our app as a whole.
 
 -------------------------------------------------------------------------------------------------------
 
