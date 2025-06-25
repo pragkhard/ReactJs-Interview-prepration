@@ -11,7 +11,7 @@ https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadoplj
 
 ----------------------------------------------------------------------------------------------------------
 
-What is basically does is - 
+What basically does is - 
 ---------------------------
 Inspect - > We get these two extra options overe there -> Components and profiler
 ![alt text](image.png)
@@ -28,14 +28,19 @@ Component -
 
 We have these icons over here - 
 
-1. ![alt text](image-2.png)
+-------------------------------
 
-If i click on it you're gonna see our app which throws an error. Maybe this can be used for testing our erros like errow boundary.
+1. 
+![alt text](image-2.png)
 
-2. ![alt text](image-3.png)
-Inspect the matching DOM element and If i want to see, where the element does exist inside the DOM. So, what i can do , I just click on the eye button and it will just take me directly to thata div. 
+First icon is Focus the selected component into an errored state. If i click on it you're gonna see our app which throws an error. Maybe this can be used for testing our erros like errow boundary.
 
-and i want to see where does this exist inside of my DOM right in the element tab. So what can i do , i can just click on I button over here and it will just take me directly to that div 
+2.
+![alt text](image-3.png)
+Second one is inspect the matching DOM element . Inspect the matching DOM element and If i want to see, where the element does exist inside the DOM. So, what i can do , I just click on the eye button and it will just take me directly to the div. 
+
+3.
+ 
 
 Profiler -
 -----------
