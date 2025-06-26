@@ -11,10 +11,11 @@ Client side Rendering vs Server Side Rendering
 Client side Rendering Props & Cons-
 ------------------------------------
 Props - 
-* Rich interaction - In client side rendering we have the rich interaction. we are using something like react-router, whenever we click on any other link so yu can see the website chnages instantly. Client rendered app give us the feeling of you know basically a nativeness to that app. 
+* Rich interaction - 
+In client side rendering we have the rich interaction. we are using something like react-router, whenever we click on any other link so yu can see the website chnages instantly. Client rendered app give us the feeling of you know basically a nativeness to that app. 
 like for example when we use an app inside of our mobile phone everthing is just instant.
 
-* Reduced server load
+* Reduced server load -
 Most of the rendering done on the client side, it reduces the load on the server. 
 If we go to the network and just see the JS file that we're getting inside it we can see the chunk og javascript coming from backend. so that a huge js file whch is resposible for injecting the code inside of this dev with ID root . So most of the rendering is happening in the frontend which result in reduced server load.
 
@@ -24,6 +25,24 @@ Cons-
 * Server initial load
 * Bad for SEO
 * Dependency on the user's device
+
+Server Side Rendering-
+-------------------------
+Props -
+* Faster initial page load
+* Better SEO
+* Consistent performance
+
+Cons -
+* Increased lod of server
+* Frequent server requests can increase latency
+* More complex to implement 
+
+Use cases- 
+------------
+Client-Side - Ideal for application that require rich interations after initial load. such as single-page application where SEO is not a primary concern.
+
+Server-Side - Best for content-heavy sites where SEO and fast initial load times are crucial, such as ecommerce sites and news websites.
 
 
 
