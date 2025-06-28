@@ -32,11 +32,32 @@ So the solution for this server side rendering.
 
 Server Side Rendering-
 -------------------------
-When coem
+When comes to the server side rendering a lot of us thinki that we are gonna use next.js but before next how do the people setup server side rendering
+
+https://react.dev/reference/react-dom/server
+
+so we have this react-dom/server these help us you to render our whole application to our server and for this we have to setup node.js. 
+Also we have these functions - 
+renderToPipeableStream , renderToReadableStream its the huge topic and now a days there is much better solution for server side rendering a framework.
+Next.js, Expo
+https://react.dev/learn/creating-a-react-app#production-grade-react-frameworks
+
+https://nextjs.org/docs/app/getting-started/installation
+
+After setting up the nextjs we will get the multiple files in the network  and see we have this HTML file and see this proves that this app is now server rendered beacuse now we are getting the whole HTML pge from server. So server has done the heavy lifting and provided us with this page over here.
+
+![alt text](image.png)
+
+![alt text](image-1.png)
+
+Now in the source code we will get the all the fetch data overe here and this is what about server side rendering all about 
+
 Props -
-* Faster initial page load
-* Better SEO
-* Consistent performance
+* Faster initial page load - Because we are not getting the huge chunks of jvascript. So, in a react tab, if there was a multiple page application, we would get the data for a of these pages at once, but in this we will only get the data for all of these pages at once, but in this, we will only get the data for the data for all the current page.
+
+* Better SEO - Obviously because google can crawl. now our website and display ,you know, the data accordingly to the people who are searching for that product. More depends on the user's. earlier client had the increased load now server had the increased load so your server costs can go up. 
+
+* Consistent performance 
 
 Cons -
 * Increased lod of server
