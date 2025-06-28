@@ -40,6 +40,7 @@ so we have this react-dom/server these help us you to render our whole applicati
 Also we have these functions - 
 renderToPipeableStream , renderToReadableStream its the huge topic and now a days there is much better solution for server side rendering a framework.
 Next.js, Expo
+
 https://react.dev/learn/creating-a-react-app#production-grade-react-frameworks
 
 https://nextjs.org/docs/app/getting-started/installation
