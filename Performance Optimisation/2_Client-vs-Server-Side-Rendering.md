@@ -56,14 +56,15 @@ Now in the source code we will get the all the fetch data overe here and this is
 Props -
 * Faster initial page load - Because we are not getting the huge chunks of jvascript. So, in a react tab, if there was a multiple page application, we would get the data for a of these pages at once, but in this we will only get the data for all of these pages at once, but in this, we will only get the data for the data for all the current page.
 
-* Better SEO - Obviously because google can crawl. now our website and display ,you know, the data accordingly to the people who are searching for that product. More depends on the user's. earlier client had the increased load now server had the increased load so your server costs can go up. 
+* Better SEO - Obviously because google can crawl. now our website and display ,you know, the data accordingly to the people who are searching for that product.  
 
-* Consistent performance 
+* Consistent performance - No depends on the user's device for the rendering capabilities.
+
 
 Cons -
-* Increased lod of server
-* Frequent server requests can increase latency
-* More complex to implement 
+* Increased lod of server - Increased load now server had the increased load so your server costs can go up.
+* Frequent server requests can increase latency - If you are using something like caching and all it can increase you latency.
+* More complex to implement - I mean this is not that much accurate because earlier it was complex to implement when next did't exist, but right now , its much more easier, But again there are a lot of corner cases that occur when you something like server side rendering.
 
 Use cases- 
 ------------
@@ -71,5 +72,6 @@ Client-Side - Ideal for application that require rich interations after initial 
 
 Server-Side - Best for content-heavy sites where SEO and fast initial load times are crucial, such as ecommerce sites and news websites.
 
+makes these both of these things to create an ideal application and this is best for content.
 
 
