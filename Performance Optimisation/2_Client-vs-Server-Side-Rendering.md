@@ -19,15 +19,20 @@ like for example when we use an app inside of our mobile phone everthing is just
 Most of the rendering done on the client side, it reduces the load on the server. 
 If we go to the network and just see the JS file that we're getting inside it we can see the chunk og javascript coming from backend. so that a huge js file whch is resposible for injecting the code inside of this dev with ID root . So most of the rendering is happening in the frontend which result in reduced server load.
 
-* better client-side caching
+* Better client-side caching -
+If we have any assets lets say images , if we sent any websites and has a bunch of images, first time it will takes a lot of time but when you refresh the page next time the image load instantly. That's why it is better for client side caching. But evertime if its coming from the server, we have , to load those images again and again.
 
 Cons-
-* Server initial load
-* Bad for SEO
-* Dependency on the user's device
+* Server initial load - Since we have huge chunk of JS data from backend. Imagine we have bigger react application lets say ecommerce site. what's gonna happen there, our website take quite a lot of while to load and yeah we wil discuss a lot of otimization techniques as we move forward. Ecommerce web server or something like that. If you're completely making it client rendered, then definitely it will be slower in initial load.
+
+* Bad for SEO - Since we don't get anything inside of our page source, we're just getting an empty HTML. So, its not at all good for SEO
+* Dependency on the user's device - There is a dependency on the user's device because every single function is happening. Every single functionality, is taking place on the user's device and it's dependent on the browser's capability.
+
+So the solution for this server side rendering.
 
 Server Side Rendering-
 -------------------------
+When coem
 Props -
 * Faster initial page load
 * Better SEO
