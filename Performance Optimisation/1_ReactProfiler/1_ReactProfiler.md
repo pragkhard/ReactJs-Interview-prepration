@@ -58,7 +58,7 @@ View source for this element. It will onto this source(src) tab and you can see 
 Profiler -
 -----------
 
-Profiler is used for measuring the performance. It provide us the chat , this chart provides us how much time a particular component took to be rendered
+Profiler is used for measuring the performance. It provide us the chart , this chart provides us how much time a particular component took to be rendered
 
 If i click on this start profiling make the changes(ex. change the star rating)
 
@@ -96,9 +96,12 @@ There are multiple techniques in React that we can use to optimize our applicati
 
 Once we install the React Developer Tools, we get two additional tabs in the browser dev tools: Components and Profiler.
 
-The Components tab allows us to see the component hierarchy tree of the entire application. It shows each component’s props, state, and hooks. This makes debugging much easier by allowing us to trace where each component exists and how it behaves in the DOM.
+When we inspect we already have elements tab which shows all the dives and everthing. This is basically converted data/JSX into normal HTML. If you want to see the JSX we can not see over there
+by using component section you can see it the exact level of JSX hierarchy of our entire application and all the tags. also It shows each component’s props, state, and hooks. This makes debugging much easier by allowing us to trace where each component exists and how it behaves in the DOM.
 
-The Profiler tab provides a performance chart that shows how much time each component took to render or re-render. This visual representation helps us identify performance bottlenecks and optimize components accordingly.
+
+Profiler is used for measuring the performance. The Profiler tab provides a performance rank chart that shows how much time each component took to render or re-render. This visual representation helps us identify performance bottlenecks and optimize components accordingly.
+There is also the option of flame grap chart, there you can see the sequentially show us what are all things that got rendered or not rendered.
 
 Components in blue indicate they were re-rendered.
 Components in grey indicate they did not re-render.
