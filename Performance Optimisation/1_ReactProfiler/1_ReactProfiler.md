@@ -38,7 +38,7 @@ First icon is Focus the selected component into an errored state. If i click on 
 2.
 ![alt text](image-3.png)
 
-Second one is inspect the matching DOM element . Inspect the matching DOM element and If i want to see, where the element does exist inside the DOM. So, what i can do , I just click on the eye button and it will just take me directly to the div. 
+Second one is inspect the matching DOM element. Inspect the matching DOM element and If i want to see, where the element does exist inside the DOM. So, what i can do , I just click on the eye button and it will just take me directly to the div. 
 
 3.
 ![alt text](image-4.png)
@@ -92,19 +92,46 @@ React developer tool is all about , this is how it helps us to you know, showcas
 
 -------------------------------------------------------------------------------------------------------
 
-There are multiple techniques in React that we can use to optimize our application, we do have react profile  which is part of the React Developer Tools extension.
+There are multiple techniques in React that we can use to optimize our application, we do have react profile which is part of the React Developer Tools extension.
 
 Once we install the React Developer Tools, we get two additional tabs in the browser dev tools: Components and Profiler.
 
 When we inspect we already have elements tab which shows all the dives and everthing. This is basically converted data/JSX into normal HTML. If you want to see the JSX we can not see over there
-by using component section you can see it the exact level of JSX hierarchy of our entire application and all the tags. also It shows each component’s props, state, and hooks. This makes debugging much easier by allowing us to trace where each component exists and how it behaves in the DOM.
 
+by using component section you can see it the exact level of JSX hierarchy of our entire application and all the tags. also It shows each component’s props, state, and hooks. This makes debugging much easier by allowing us to trace where each component exists and how it behaves in the DOM.
 
 Profiler is used for measuring the performance. The Profiler tab provides a performance rank chart that shows how much time each component took to render or re-render. This visual representation helps us identify performance bottlenecks and optimize components accordingly.
 There is also the option of flame grap chart, there you can see the sequentially show us what are all things that got rendered or not rendered.
 
 Components in blue indicate they were re-rendered.
 Components in grey indicate they did not re-render.
-
+Components in yellow indicate they 
+We just remove the loops logic and start and stop the profiler. So we have largely optimized our app and made it so much faster.
 Together, these tools help us inspect, debug, and optimize our React application more effectively.
+
+------------------------------------------------------------------------------------------------------
+
+
+
+There are multiple techniques in React that we can use to **optimize our application**, and one of the most effective tools for this is the **React Profiler**, which is part of the **React Developer Tools** extension.
+
+Once we install the React Developer Tools in the browser, it adds **two additional tabs** in the browser's DevTools: **Components** and **Profiler**.
+
+When we inspect a page using the default **Elements** tab, we only see the transpiled HTML structure — that is, JSX converted into regular HTML. So we can't directly see the actual JSX component structure from there.
+
+However, using the **Components** tab, we can view the exact **JSX hierarchy** of the entire React application. It displays all components along with their **props, state, and hooks**, making it much easier to debug. We can trace each component, understand how it behaves in the DOM, and see how data flows across the app.
+
+The **Profiler** tab is specifically used for **measuring performance**. It provides a visual chart showing **how much time each component took to render or re-render**. This helps us identify performance bottlenecks and decide which components need optimization.
+
+It also includes a **Flame Graph**, which shows us in sequence which components rendered or didn’t:
+
+* **Blue** indicates components that were re-rendered.
+* **Grey** indicates components that did not re-render.
+* **Yellow** usually highlights components that are potentially expensive or slow in rendering.
+
+For example, if we identify unnecessary re-renders caused by loops or large re-renders, we can remove that logic, start and stop the Profiler again, and **visibly track performance improvements**.
+
+Together, the **Components** and **Profiler** tabs help us **inspect, debug, and optimize** our React applications more effectively, making them more performant and easier to maintain.
+
+
 
