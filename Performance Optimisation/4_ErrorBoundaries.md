@@ -33,3 +33,11 @@ How we can implement it -
 ![alt text](image-5.png)
 
 Create the component error.fallback.jsx
+
+So now what we just need to do, we can go back to app.jsx. And we can wrap whole of our app in the error boundary or if you want you can wrap a specific part of that app in the error boundary. So if I go to Homepage. Yeah, this is the home page. Boundary. Let's import this error boundary first. Import error. Error, boundary from React and a boundary, and it's actually named import. So okay. Now, this error boundary takes a fallback component takes two things - fallback and reset function
+
+![alt text](image-6.png)
+
+![alt text](image-7.png)
+
+this is basically might be using the older version of react router.
