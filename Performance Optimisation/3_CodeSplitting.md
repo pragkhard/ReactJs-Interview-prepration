@@ -26,8 +26,31 @@ Import the component using lazy -
 
 we use the lazy function and inside of it using callback and there we will import the component 
 
-What will be displayed when this star rating is being loaded. So that we need to wrap the component inside suspense. 
+What will be displayed when this star rating is being loaded. So that we need to wrap the component inside suspense and suspense takes a fallback
 
+![alt text](image-5.png)
+
+You may have seen for a split second there was star component after that start component is loaded
+
+![alt text](image-6.png)
+
+Same thing we can do in the paginantion 
+
+![alt text](image-7.png)
+
+![alt text](image-8.png)
+
+There's going to be different usecases according to which you have to implement this feature.
+
+we can implement the lazy loding in routes. when we load the page particullarly on that page.
+
+![alt text](image-9.png)
+
+![alt text](image-10.png)
+
+![alt text](image-11.png)
+
+ so you might be thinking, why are we not wrapping this suspense in over here like you know, in a whole of our app. So the reason for that is Let's see if any error occurs in this home component. The error boundary is over here, right? so we won't have this protection.so we re wrapping it a;; of our seperate component.
 
 
 
