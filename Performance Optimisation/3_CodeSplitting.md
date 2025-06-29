@@ -1,0 +1,5 @@
+React application consists of bunch of methods components and third-party libraries. And if we didn't do anything to make those different parts load only when they are needed, a huge bundle or chunk of JavaScript will be shipped to your users as soon as they open your website, which will affect the performance of your app. Significantly. 
+
+For example, we have this shopping cart app that we made earlier in the machine coding session, right? If we load this app, you're gonna see if I go to inspect and spectan in the network. Let's just select JavaScript and load this page. You can see right over here. We have this huge chunk of javaScript that is being loaded every single time. You can see 925 kilobytes all at once. So this chunk of javaScript contains the data inside for this page, like, JavaScript for this page, and JavaScript for this page, as well. Right. So, what should we do to avoid this? Yep, the answer is code splitting.
+
+![alt text](image.png)
