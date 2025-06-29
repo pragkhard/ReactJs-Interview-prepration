@@ -52,6 +52,10 @@ we can implement the lazy loding in routes. when we load the page particullarly 
 
  so you might be thinking, why are we not wrapping this suspense in over here like you know, in a whole of our app. So the reason for that is Let's see if any error occurs in this home component. The error boundary is over here, right? so we won't have this protection.so we re wrapping it a of our seperate component.
 
+ ![alt text](image-13.png)
+
+Lighthouse and let's generate a new report so analyze page load. So there you go. We have improved performanceby I think eight points. So earlier it for 56 right now, it's 64. So you see this is the power of code splitting. And again it's not just code splitting that will significantly boost the performance of our ad. Obviously they are other things as well, which you can see FCP Icp CLS which we will be discussing in the coming lessons in probably our web vitals lesson
+
 
 
 
