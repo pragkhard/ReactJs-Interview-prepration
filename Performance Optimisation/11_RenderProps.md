@@ -26,3 +26,10 @@ This logic to remain the same but this thing to change, right? Or probably we ca
 I think we're supposed to send it in an Object format.
 Yeah yeah this is working but see the actual use case of this comes when you actually have to you know add some more Functionality or you know, let's say you have to build some other Ul over here as well.
 Let's say, if I'll just wrap it inside of a div Script curly braces. 2, which will say toggle component. Now, this is same, but this is going to be different for different different types of component, right? So, this is what a render problem is all about
+
+And let me give you another example. Like, for example, you can see in Amazon, we have the product card, right? So let me open Amazon. So let's say we have a lot of product cards now, suppose this section or probably whatever, like this, this section is supposed to be dynamic, right? So what we can do, we can create a render prop for this particular card component and we can supply this thing from outside. So this
+
+![alt text](image-7.png)
+
+this thing will be dynamic. You can consider it kind of similar to higher order component as well. But not component and we can supply this thing from outside. So this thing will be dynamic, you can consider it kind of similar to higher order component as well. But not really because higher order component supplies with different efforts and stuff as well even though this also supplies us with props, but this is used more of so make sure that you have implemented this somewhere in your apps as well. This will put i will put a really good impression on the interviewer.
+
