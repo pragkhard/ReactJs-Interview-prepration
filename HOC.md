@@ -15,3 +15,8 @@ So, you really need a Higher-Order Component in cases where multiple components 
         const MyComponent = ({ message }) => <h1>{message}</h1>;
 
         const EnhancedComponent = withMessage(MyComponent);
+
+
+* WrappedComponent is a parameter passed into the Higher-Order Component function.
+
+
