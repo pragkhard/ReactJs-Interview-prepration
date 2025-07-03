@@ -65,3 +65,114 @@ I’ve also worked with render props to create reusable data-fetching components
 
 Lastly, I monitor Web Vitals like LCP, CLS, and FID. Once, I fixed a layout shift issue caused by dynamic banners by reserving space using aspect ratios.”_
 
+
+
+
+
+----------------------------------------------------------------------------------------------------
+
+Suppose we’re working on a big project that includes heavy third-party modules, such as maps, charts, or rich editors. If we load all of them at once during the initial load, the app becomes slow because of the large JavaScript bundle.
+
+To solve this, we use lazy loading — which is part of code splitting — to load these components only when they are needed.
+
+In React, we implement this using:
+
+React.lazy() → to load the component lazily.
+
+Suspense → to show a fallback (like a loader) while the component is loading.
+
+🧩 Example:
+const MapComponent = React.lazy(() => import('./MapComponent'));
+
+<Suspense fallback={<div>Loading map...</div>}>
+  <MapComponent />
+</Suspense>
+This will create a separate bundle for the Map component, and it will be loaded only when required — improving performance by reducing the initial load.
+
+
+To measure improvements, we can use Lighthouse, a tool available in Chrome DevTools. It helps us analyze the performance of the application, especially after implementing optimizations like code splitting.
+
+------------------------------------------------------------------------------------------------
+
+
+for optimize the app we use the techniques like -  error boundaries techniques- which catch the error on run time and showing fallback instead of clashing the application- frame the sentences 
+
+“In functional components, I use the react-error-boundary library to implement error boundaries. I wrap my route components with ErrorBoundary and provide a fallback UI, so if any component crashes, it shows an error screen instead of breaking the entire app.”
+
+----------------------------------------------------------------------------------------------------
+
+If I have to render a very large list, like 1 million items, I will not render all items at once, because it would slow down the app and will crash the browser also make the DOM very heavy.
+
+Instead, I’ll use a technique called virtualization.
+
+Virtualization means:
+🔹 Only the visible items on the screen and the viewport are rendered.
+🔹 As the user scrolls, new items are added, and old items are removed from the DOM.
+🔹 This keeps the DOM size small and improves performance.
+
+In React, we can implement this using libraries like react-window or react-virtualized.
+These libraries handle everything efficiently and are used by many big tech companies.
+
+If needed, we can also implement our own version using IntersectionObserver, but using react-window is the recommended industry standard.
+
+-----------------------------------------------------------------------------------------------------
+
+Why not just use Pagination or Infinite Scroll?
+Pagination loads a limited number of items per page, but each time you change the page, it re-renders the entire list, which can still be slow with large data.
+
+Infinite Scroll keeps adding new items as you scroll, but it keeps all previous items in the DOM, which increases memory usage and slows down the app over time.
+
+------------------------------------------------------------------------------------------------------
+
+we can avoid the repetation of the code by avoiding the We use Higher-Order Components (HOCs) 
+we use HOC in different different scenarios - 
+* When we have a piece of logic (like checking options, permissions, or authentication) that is repeated across multiple components.
+* we need to enhance a component with additional behaviors 
+in that case we are using it. 
+
+We can wrap other components with a Higher-Order Component (HOC) function to provide them with common data or functionality. This approach helps us avoid code duplication.
+
+Suppose we have a component that contains logic to add values, but at a certain point, we also want to enhance it by displaying a special message like "Premium" without changing the original component. In this case, we can use a Higher-Order Component (HOC) to wrap the original component and add the extra "Premium" functionality. This way, we enhance the behavior without modifying the existing logic, keeping the code clean, reusable, and maintainable.
+
+
+Add.js-
+ -------
+
+        const Add = ({a,b})=>{
+        return <h1>Result {a+b} </h1>
+        }
+
+        export default Add
+
+
+withPremium.js-
+ ----------------
+
+        const withPremium=(WrappedComponent)=>{
+        return (props)=>(
+            <>
+            <p>Premium</p>
+            <WrappedComponent {...props}/>
+            </>
+        )
+        }
+
+        export default withPremium
+
+
+App.js
+ ------
+
+
+            import React from 'react';
+            import withPremium from './withPremium'
+            import Add from './Add'
+
+            const PremiumAdd = withPremium(Add)
+
+            export function App() {
+            return (
+                <PremiumAdd a={5} b={5}/>
+            );
+            }
+
