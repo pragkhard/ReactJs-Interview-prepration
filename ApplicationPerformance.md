@@ -106,9 +106,9 @@ If I have to render a very large list, like 1 million items, I will not render a
 Instead, I’ll use a technique called virtualization.
 
 Virtualization means:
-🔹 Only the visible items on the screen and the viewport are rendered.
-🔹 As the user scrolls, new items are added, and old items are removed from the DOM.
-🔹 This keeps the DOM size small and improves performance.
+* Only the visible items on the screen and the viewport are rendered.
+* As the user scrolls, new items are added, and old items are removed from the DOM.
+* This keeps the DOM size small and improves performance.
 
 In React, we can implement this using libraries like react-window or react-virtualized.
 These libraries handle everything efficiently and are used by many big tech companies.
@@ -176,3 +176,8 @@ App.js
             );
             }
 
+-----------------------------------------------------------------------------------------------------
+
+Imagine you're building multiple components that need toggle behavior — like showing/hiding details. If you don't reuse logic, you’ll repeat the same useState and toggle code everywhere.
+
+Render props helps you extract common logic into one component, and pass UI as a function.
