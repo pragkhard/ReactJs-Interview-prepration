@@ -1,0 +1,1 @@
+ESLint is a popular JavaScript and TypeScript static code analysis tool that helps developers find and fix problems in their code — such as bugs, stylistic errors, or potential issues — by applying coding standards and best practices.
