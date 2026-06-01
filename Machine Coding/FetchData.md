@@ -28,13 +28,16 @@ Using fetch method-
 
 NOTE:
 * async should be in small letter
-*  Difference between two 
+*  Difference between two
+  
         <div>
               {users.map((user) => (
                 <p key={user.id}>{user.name}</p>
               ))}
             </div>
-        and 
+   
+        And
+   
         -- (Does Not Work)-- 
         <div>
               {users.map((user) => {
