@@ -84,7 +84,39 @@ Without return, the function returns undefined, so React won't render anything.
 - After re-render, useEffect runs again.
 - API is called again.               
                 
- 
+Flow - 
+        Initial Render
+              ↓
+        users = []
+              ↓
+        UI shows nothing
+              ↓
+        useEffect runs
+              ↓
+        fetchUsers()
+              ↓
+        API returns data
+              ↓
+        setUsers(data)
+              ↓
+        State changes
+              ↓
+        Re-render
+              ↓
+        users contains data
+              ↓
+        UI shows user names
+              ↓
+        useEffect skipped because []
+
+with-
+Initial render means the first time React executes the component and paints the UI on the screen. In this example, users is initially an empty array, so nothing is displayed. After the component mounts, useEffect runs once because the dependency array is empty. It fetches data from the API and updates the state using setUsers. The state update triggers a re-render, and now the user list is displayed. Since the dependency array is empty, the effect does not run again after the re-render.  
+
+without-
+Initial render means the first time React executes the component and paints the UI on the screen. In this example, users is initially an empty array, so nothing is displayed. After the component mounts, useEffect runs because no dependency array is provided. It fetches data from the API and updates the state using setUsers. The state update triggers a re-render, and now the user list is displayed. However, because there is no dependency array, useEffect runs again after every re-render. It fetches the data again and calls setUsers, which updates the state and causes another re-render. This process keeps repeating, resulting in continuous API calls and an infinite render loop.
+        
+        
+
 Using Axios -
 ==============
 
