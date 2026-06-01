@@ -26,6 +26,36 @@ Using fetch method-
         );
         }
 
+NOTE:
+* async should be in small letter
+*  Difference between two 
+        <div>
+              {users.map((user) => (
+                <p key={user.id}>{user.name}</p>
+              ))}
+            </div>
+        and 
+        -- (Does Not Work)-- 
+        <div>
+              {users.map((user) => {
+        
+                <p key={user.id}>{user.name}</p>
+        
+              })}
+        </div>
+        
+        -- (Works)-- 
+        <div>
+              {users.map((user) => {
+                return <p key={user.id}>{user.name}</p>
+        
+              })}
+        </div>
+
+When an arrow function always use parentheses (), the value is returned automatically (implicit return). 
+When it uses curly braces {},which create a function body and you must explicitly use the return keyword. 
+Without return, the function returns undefined, so React won't render anything.
+
 
 Using Axios -
 ==============
