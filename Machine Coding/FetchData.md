@@ -59,7 +59,32 @@ When an arrow function always use parentheses (), the value is returned automati
 When it uses curly braces {},which create a function body and you must explicitly use the return keyword. 
 Without return, the function returns undefined, so React won't render anything.
 
+* useEffect with an Empty Dependency Array [] & wihout Dependency Array
+# With an Empty Dependency Array [] -
+  
+          useEffect(() => {
+          fetchUsers();
+        }, []);
 
+- The effect runs only once after the component is rendered for the first time (component mount).
+- fetchUsers() is called once.
+- API is hit only once.
+- When setUsers(data) updates the state, the component re-renders, but the effect does not run again because the dependency array is empty.
+
+ # Without an Empty Dependency Array [] -
+ 
+          useEffect(() => {
+                  fetchUsers();
+                }, []);
+
+- The effect runs after every render.
+- fetchUsers() calls the API.
+- setUsers(data) updates state.
+- State update causes a re-render.
+- After re-render, useEffect runs again.
+- API is called again.               
+                
+ 
 Using Axios -
 ==============
 
