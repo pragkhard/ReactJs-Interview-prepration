@@ -67,6 +67,7 @@ If one API's response is needed for another API request, I call them sequentiall
 Break the code into parts - 
 
 Fetch the data in both the APIs-
+-----------------------------------
 
           import React, { useEffect, useState } from "react";
           
