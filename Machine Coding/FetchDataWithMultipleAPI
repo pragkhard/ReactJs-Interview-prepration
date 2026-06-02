@@ -13,7 +13,6 @@ If one API's response is needed for another API request, I call them sequentiall
 -----------------------------------------------
 
                         import React, { useEffect, useState } from "react";
-                        
                         export default function App() {
                           const [user, setUser] = useState(null);
                           const [posts, setPosts] = useState([]);
@@ -51,17 +50,17 @@ If one API's response is needed for another API request, I call them sequentiall
         
  Output - 
 
-            User: Leanne Graham
-            sunt aut facere repellat provident occaecati excepturi optio reprehenderit
-            qui est esse
-            ea molestias quasi exercitationem repellat qui ipsa sit aut
-            eum et est occaecati
-            nesciunt quas odio
-            dolorem eum magni eos aperiam quia
-            magnam facilis autem
-            dolorem dolore est ipsam
-            nesciunt iure omnis dolorem tempora et accusantium
-            optio molestias id quia eum
+                  User: Leanne Graham
+                  sunt aut facere repellat provident occaecati excepturi optio reprehenderit
+                  qui est esse
+                  ea molestias quasi exercitationem repellat qui ipsa sit aut
+                  eum et est occaecati
+                  nesciunt quas odio
+                  dolorem eum magni eos aperiam quia
+                  magnam facilis autem
+                  dolorem dolore est ipsam
+                  nesciunt iure omnis dolorem tempora et accusantium
+                  optio molestias id quia eum
 
 
 Break the code into parts - 
@@ -70,7 +69,6 @@ Fetch the data in both the APIs-
 -----------------------------------
 
           import React, { useEffect, useState } from "react";
-          
           export default function App() {
              const[data, setData] = useState([])
              const[postdata, setPostdata] = useState([])
