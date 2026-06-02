@@ -1,1 +1,53 @@
+There are multiple ways to call 2 or 3 APIs in a single React component.
 
+1. Sequential API Calls (One after Another)
+Second API waits for the first API to complete.
+
+2. Parallel API Calls using Promise.all() (Recommended)
+All APIs are called simultaneously, making it faster.
+
+If the APIs are independent, I use Promise.all() to call them in parallel because it improves performance. 
+If one API's response is needed for another API request, I call them sequentially using await.
+
+1. Sequential API Calls / Use Sequential await
+-----------------------------------------------
+
+
+        import React, { useEffect, useState } from "react";
+        
+        export default function App() {
+          const [user, setUser] = useState(null);
+          const [posts, setPosts] = useState([]);
+        
+          const fetchData = async () => {
+            const userResponse = await fetch(
+              "https://jsonplaceholder.typicode.com/users/1"
+            );
+            const userData = await userResponse.json();
+        
+            setUser(userData);
+        
+            const postResponse = await fetch(
+              `https://jsonplaceholder.typicode.com/posts?userId=${userData.id}`
+            );
+            const postsData = await postResponse.json();
+        
+            setPosts(postsData);
+          };
+        
+          useEffect(() => {
+            fetchData();
+          }, []);
+        
+          return (
+            <div>
+              <h2>User: {user?.name}</h2>
+        
+              {posts.map((post) => (
+                <p key={post.id}>{post.title}</p>
+              ))}
+            </div>
+          );
+        }
+        
+        
