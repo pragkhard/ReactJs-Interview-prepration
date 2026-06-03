@@ -96,7 +96,9 @@ Break the code into parts -
             );
           }
           
-Now,      
+Now, "This is an example of dependent API calls. First, I fetch the user details from /users/1 and get the user's name and ID.
+Once the first API returns the user ID, I use that ID in the second API call /posts?dataID=${setData.id} to fetch all posts belonging to that user. 
+Finally, I display the user's name and their post titles."     
 
              import React, { useEffect, useState } from "react";
 
