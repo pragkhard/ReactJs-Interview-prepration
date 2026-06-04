@@ -1,0 +1,129 @@
+There are multiple ways to call 2 or 3 APIs in a single React component.
+
+1. Sequential API Calls (One after Another)
+Second API waits for the first API to complete.
+
+2. Parallel API Calls using Promise.all() (Recommended)
+All APIs are called simultaneously, making it faster.
+
+If the APIs are independent, I use Promise.all() to call them in parallel because it improves performance. 
+If one API's response is needed for another API request, I call them sequentially using await.
+
+1. Sequential API Calls / Use Sequential await
+-----------------------------------------------
+
+                        import React, { useEffect, useState } from "react";
+                        export default function App() {
+                          const [user, setUser] = useState(null);
+                          const [posts, setPosts] = useState([]);
+                        
+                          const fetchData = async () => {
+                            const userResponse = await fetch(
+                              "https://jsonplaceholder.typicode.com/users/1"
+                            );
+                            const userData = await userResponse.json();
+                        
+                            setUser(userData);
+                        
+                            const postResponse = await fetch(
+                              `https://jsonplaceholder.typicode.com/posts?userId=${userData.id}`
+                            );
+                            const postsData = await postResponse.json();
+                        
+                            setPosts(postsData);
+                          };
+                        
+                          useEffect(() => {
+                            fetchData();
+                          }, []);
+                        
+                          return (
+                            <div>
+                              <h2>User: {user?.name}</h2>
+                        
+                              {posts.map((post) => (
+                                <p key={post.id}>{post.title}</p>
+                              ))}
+                            </div>
+                          );
+                        }
+        
+ Output - 
+
+                  User: Leanne Graham
+                  sunt aut facere repellat provident occaecati excepturi optio reprehenderit
+                  qui est esse
+                  ea molestias quasi exercitationem repellat qui ipsa sit aut
+                  eum et est occaecati
+                  nesciunt quas odio
+                  dolorem eum magni eos aperiam quia
+                  magnam facilis autem
+                  dolorem dolore est ipsam
+                  nesciunt iure omnis dolorem tempora et accusantium
+                  optio molestias id quia eum
+
+
+Break the code into parts - 
+
+2. Fetch the data in both the APIs-
+-----------------------------------
+
+          import React, { useEffect, useState } from "react";
+          export default function App() {
+             const[data, setData] = useState([])
+             const[postdata, setPostdata] = useState([])
+            
+              const fetchData = async() =>{
+              const response = await fetch('https://jsonplaceholder.typicode.com/users')
+              const result = await response.json()
+              setData(result)
+          
+              const postresponse = await fetch('https://jsonplaceholder.typicode.com/posts')
+              const postresult = await postresponse.json()
+               setPostdata(postresult)
+               
+             }
+             useEffect(()=>{
+               fetchData()
+             },[])
+            
+            return (
+              <div>
+                {data.map((item)=>(<li>{item.id}</li>))}
+                {postdata.map((item)=>(<li>{item.title}</li>))}
+                
+              </div>
+            );
+          }
+          
+Now, "This is an example of dependent API calls. First, I fetch the user details from /users/1 and get the user's name and ID.
+Once the first API returns the user ID, I use that ID in the second API call /posts?dataID=${setData.id} to fetch all posts belonging to that user. 
+Finally, I display the user's name and their post titles."     
+
+             import React, { useEffect, useState } from "react";
+
+             export default function App() {
+             const[data, setData] = useState([])
+             const[postdata, setPostdata] = useState([])
+            
+              const fetchData = async() => {
+              const response = await fetch('https://jsonplaceholder.typicode.com/users/1')
+              const result = await response.json()
+              setData(result)
+          
+              const postresponse = await fetch('https://jsonplaceholder.typicode.com/posts?dataID=${setData.id}')
+              const postresult = await postresponse.json()
+               setPostdata(postresult)
+               
+             }
+             useEffect(()=>{
+               fetchData()
+             },[])
+            
+            return (
+              <div>
+                <h2>User: {data?.name}</h2>
+                {postdata.map((item)=>(<li>{item.title}</li>))}      
+              </div>
+            );
+          }
