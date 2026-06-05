@@ -9,8 +9,8 @@ All APIs are called simultaneously, making it faster.
 If the APIs are independent, I use Promise.all() to call them in parallel because it improves performance. 
 If one API's response is needed for another API request, I call them sequentially using await.
 
-1. Sequential API Calls / Use Sequential await
------------------------------------------------
+1.Sequential API Calls / Use Sequential await
+=================================================
 
                         import React, { useEffect, useState } from "react";
                         export default function App() {
@@ -127,3 +127,7 @@ Finally, I display the user's name and their post titles."
               </div>
             );
           }
+
+
+2.Parallel API Calls using Promise.all() 
+=======================================
