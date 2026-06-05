@@ -131,3 +131,97 @@ Finally, I display the user's name and their post titles."
 
 2.Parallel API Calls using Promise.all() 
 =======================================
+
+"I use Promise.all() when multiple APIs are independent. It executes all API calls in parallel instead of sequentially, reducing the overall waiting time. Once all Promises are resolved, I process the responses and update the state."
+
+
+      import React, { useEffect, useState } from "react";
+      
+      function App() {
+        const [users, setUsers] = useState([]);
+        const [posts, setPosts] = useState([]);
+        const [comments, setComments] = useState([]);
+      
+        const fetchData = async () => {
+          try {
+            const [usersRes, postsRes, commentsRes] = await Promise.all([
+              fetch("https://jsonplaceholder.typicode.com/users"),
+              fetch("https://jsonplaceholder.typicode.com/posts"),
+              fetch("https://jsonplaceholder.typicode.com/comments"),
+            ]);
+      
+            const usersData = await usersRes.json();
+            const postsData = await postsRes.json();
+            const commentsData = await commentsRes.json();
+      
+            setUsers(usersData);
+            setPosts(postsData);
+            setComments(commentsData);
+          } catch (error) {
+            console.log("Error:", error);
+          }
+        };
+      
+        useEffect(() => {
+          fetchData();
+        }, []);
+      
+        return (
+          <div>
+            <h2>Users</h2>
+            {users.slice(0, 5).map((user) => (
+              <p key={user.id}>
+                {user.id} - {user.name}
+              </p>
+            ))}
+      
+            <h2>Posts</h2>
+            {posts.slice(0, 5).map((post) => (
+              <p key={post.id}>{post.title}</p>
+            ))}
+      
+            <h2>Comments</h2>
+            {comments.slice(0, 5).map((comment) => (
+              <p key={comment.id}>{comment.name}</p>
+            ))}
+          </div>
+        );
+      }
+      
+      export default App;
+
+output -
+
+        Users
+        1 - Leanne Graham
+        
+        2 - Ervin Howell
+        
+        3 - Clementine Bauch
+        
+        4 - Patricia Lebsack
+        
+        5 - Chelsey Dietrich
+        
+        Posts
+        sunt aut facere repellat provident occaecati excepturi optio reprehenderit
+        
+        qui est esse
+        
+        ea molestias quasi exercitationem repellat qui ipsa sit aut
+        
+        eum et est occaecati
+        
+        nesciunt quas odio
+        
+        Comments
+        id labore ex et quam laborum
+        
+        quo vero reiciendis velit similique earum
+        
+        odio adipisci rerum aut animi
+        
+        alias odio sit
+        
+        vero eaque aliquid doloribus et culpa
+          
