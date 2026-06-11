@@ -34,3 +34,12 @@ Scenario & Behavior -
 * No Dependency Array	-  Runs after every render (initial + on every state/prop update)
 * Empty Dependency Array [] -	Runs only once after the first render (similar to componentDidMount)
 * With Dependencies [btnNameReact] -	Runs after the first render and only when btnNameReact changes
+
+  How do you prevent unnecessary re-renders in React?-
+  ====================================================
+React re-renders when state or props change. To optimize performance and avoid unnecessary re-renders, I use:
+useMemo() for memoizing value
+useCallback() for memoizing functions
+Keeping state as local as possible
+Avoiding unnecessary state updates
+Proper dependency arrays in hooks
