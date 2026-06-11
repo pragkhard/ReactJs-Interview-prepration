@@ -46,4 +46,10 @@ React re-renders when state or props change. To optimize performance and avoid u
 
 When do React Hooks run?
 ==========================
-```md | Hook | Runs Before Render? | Runs After Render? | | ------------- | ------------------------------- | ----------------------------------- | | `useState` | ✅ Yes (during the render phase) | ❌ No | | `useEffect` | ❌ No | ✅ Yes (after the component renders) | | `useMemo` | ✅ Yes (during the render phase) | ❌ No | | `useCallback` | ✅ Yes (during the render phase) | ❌ No | ```
+| Hook          | Runs Before Render?             | Runs After Render?                  |
+| ------------- | ------------------------------- | ----------------------------------- |
+| `useState`    | ✅ Yes (during the render phase) | ❌ No                                |
+| `useEffect`   | ❌ No                            | ✅ Yes (after the component renders) |
+| `useMemo`     | ✅ Yes (during the render phase) | ❌ No                                |
+| `useCallback` | ✅ Yes (during the render phase) | ❌ No                                |
+
