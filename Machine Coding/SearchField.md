@@ -47,3 +47,13 @@
                     </div>
                 );
                 }
+
+* setList([...list, fruit]); means add the selected fruit to the existing list state.
+  
+  Suppose:
+  list = ["Apple", "Mango"];
+  fruit = "Banana";
+
+  [...list, fruit]
+  The spread operator (...) copies all existing items from list:
+  ["Apple", "Mango", "Banana"]
