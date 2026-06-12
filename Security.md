@@ -32,8 +32,21 @@ Session-Based Authentication divided into 4 steps
    but we do not check the string password we check the hashed password using a library like brypt.
    basically brypt stored the hased version of the password in the database and when the user submitted the password it will    check those two password to make sure those two hashed password are the same password. If they match, the user's identity    is authenticated.
 
-3. After successful authentication, the server creates a session and generates a unique Session ID.
-   The process does not stop after authentication here After the user logs in successfully, the server knows who the user       is. However, when the user makes the next request, the server does not automatically remember the previous login because     HTTP is stateless.To remember the user, the server creates a Session ID and sends it to the browser in a cookie.
+3. but it needs to let the client know that this request authenticated and for that it will set the cookies with the session ID that it just created and this is record to indicate that the user has been authenticated
+how ever one problem is cookie is that anybody ready the cookie if it is not set correctly . The server set the cookie with an httpOnly flag which basically tells js it can not access this cookies and this cookie only be accessed once it will reaches the server and that to the server that set the cookies. This prevents malicious agents from authenticated session ID from the cookies
+
+            res.cookie("session_id", sessionId,{
+            httpOnly: true,
+            maxAge: 1000*60*60*24*7
+            })
+
+4. This HTTP only flag is extremely important. Now the next time the user makes a request, we want to remember that the user logged in previously cuz
+it would be terrible experience to make the user send their password over and over again. So for that we include this cookie that we had just set every time
+we make a subsequent request. So in the future when we make a request we make sure to include the credentials using credentials include flag so that we are
+including the session ID that we had just created and then the database checks the session ID on every request.
+
+   Note: 
+   The process does not stop after authentication in the 3rd step because After the user logs in successfully, the server       knows who the user is.However, when the user makes the next request, the server does not automatically remember the          previous login because HTTP is stateless.To remember the user, the server creates a Session ID and sends it to the           browser in a cookie.
    From then on, the browser automatically sends that Session ID with every request. When the server receives the SessionID,    it recognizes the user and knows they have already logged in. This way, the user does not have to enter their username       and password again on every page.
    The server creates a Session ID after authentication so it can remember the user across multiple requests and avoid          asking them to log in again every time.  
    
