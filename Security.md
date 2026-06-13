@@ -1,6 +1,17 @@
 How do you ensure API security?
 ------------------------------------
+API security is a combination of frontend and backend measures. As a React developer, I focus on securely consuming APIs and protecting user data.
 
+* I use HTTPS to ensure data is encrypted during transmission.
+* I implement authentication using JWT tokens or secure cookies.
+* I send tokens in the Authorization header for authenticated requests.
+* I avoid storing sensitive information such as API keys or secrets in the frontend code.
+* I protect routes on the frontend, but I rely on the backend for actual authorization and role validation.
+* I validate and sanitize user inputs to help prevent XSS attacks.
+* I handle API errors securely and avoid exposing sensitive backend information to users.
+* I use proper session management and token expiration handling to prevent unauthorized access.
+
+------------------------------------------------------------------------------------------------------------------------
 * Authentication checks whether the user is genuine or not by using the credentials such as username and password.
 After successful login, the backend returns a JWT token.
 
