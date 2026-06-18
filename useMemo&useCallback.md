@@ -31,6 +31,28 @@ useMemo
         );
         }
 
+Another example -
+
+        import {useState, useMemo} from 'react';
+        export default function App() {
+          const[data, setData] = useState(0)
+        
+           // const square = data*data;
+           //  console.log("re-rendering") 
+          
+            const square = useMemo(()=>{
+              return data*data;
+            console.log("re-rendering") 
+            },[data])
+            
+          return (
+            <>
+              <h1>{square}</h1>
+              <button onClick={()=>setData(data + 1) }>On Click</button>
+            </>
+          )
+        }
+
 useCallback
 ============
 
